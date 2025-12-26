@@ -55,8 +55,6 @@
 export {
   PostcardEncoder,
   PostcardDecoder,
-  PostcardEncodable,
-  PostcardDecodable,
   encode,
   decode,
   ByteReader,
@@ -70,6 +68,7 @@ export {
   decodeSignedVarint,
   decodeSignedVarintNumber,
 } from "./postcard/index.js";
+export type { PostcardEncodable, PostcardDecodable } from "./postcard/index.js";
 
 // Re-export rapace protocol
 export {
@@ -77,7 +76,6 @@ export {
   RapaceClient,
   RapaceError,
   // Transport
-  Transport,
   TransportError,
   WebSocketTransport,
   connectWebSocket,
@@ -93,7 +91,6 @@ export {
   MSG_DESC_HOT_SIZE,
   // Flags
   FrameFlags,
-  type FrameFlagsType,
   hasFlag,
   setFlag,
   clearFlag,
@@ -101,3 +98,4 @@ export {
   computeMethodId,
   computeMethodIdFromFullName,
 } from "./rapace/index.js";
+export type { Transport, FrameFlagsType } from "./rapace/index.js";

@@ -21,6 +21,8 @@ export {
   decodeSignedVarintNumber,
 } from "./varint.js";
 
-export { PostcardEncoder, PostcardEncodable, encode } from "./encoder.js";
+export { PostcardEncoder, encode } from "./encoder.js";
+export type { PostcardEncodable } from "./encoder.js";
 
-export { PostcardDecoder, PostcardDecodable, decode } from "./decoder.js";
+export { PostcardDecoder, decode } from "./decoder.js";
+export type { PostcardDecodable } from "./decoder.js";

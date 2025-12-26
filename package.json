@@ -23,6 +23,10 @@
     "build": "tsc",
     "clean": "rm -rf dist",
     "test": "node --test --import tsx 'src/**/*.test.ts'",
+    "test:unit": "SKIP_INTEGRATION=1 node --test --import tsx 'src/**/*.test.ts'",
+    "test:integration": "./scripts/integration-test.sh",
+    "test:browser": "npx playwright test",
+    "serve:test": "node scripts/serve-test.mjs",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run clean && npm run build"
   },
@@ -53,6 +57,7 @@
   },
   "homepage": "https://github.com/bearcove/rapace-typescript#readme",
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@types/node": "^22.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"

@@ -24,10 +24,10 @@ export { Frame, MIN_FRAME_SIZE } from "./frame.js";
 export { computeMethodId, computeMethodIdFromFullName } from "./method-id.js";
 
 export {
-  Transport,
   TransportError,
   WebSocketTransport,
   connectWebSocket,
 } from "./transport.js";
+export type { Transport } from "./transport.js";
 
 export { RapaceClient, RapaceError } from "./client.js";
